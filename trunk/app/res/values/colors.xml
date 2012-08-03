@@ -1,0 +1,17 @@
+<resources>
+    <color name="view_bg">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="unread">#ecf0f5</color>
+    <color name="darkgray">#ff555555</color>
+    <color name="blue_button_color">#ffe5edff</color>
+    <color name="dark_blue_button_color">#ff5d7186</color>
+    <color name="blue">#2d63a0</color>
+    <color name="actionbar_title">#ffe0e0e0</color>
+    <color name="light_bg">#dde3e9</color>
+    <color name="light_bg_search">#ffa2a7ad</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="lighter_gray">#dddddd</color>
+    <color name="medium_gray">#888888</color>
+    <color name="light_bg">#ededed</color>
+</resources>

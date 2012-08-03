@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <include android:id="@+id/actionbar" layout="@layout/actionbar"/>
+
+    <com.google.android.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:clickable="true"
+            android:apiKey="0ttavtoILdmYaHSwZt8DVgJ06rVpipdxFzmGhzQ"
+            />
+
+    <Button
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="37dp"
+            android:id="@+id/btn_submit"
+            android:text="@string/select_point"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            style="@style/blue_button"
+            />
+
+</LinearLayout>

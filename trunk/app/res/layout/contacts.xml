@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@color/view_bg"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:focusable="true" android:focusableInTouchMode="true"
+            android:layout_width="0px" android:layout_height="0px"/>
+
+    <TabHost android:id="@android:id/tabhost"
+             android:layout_height="@dimen/actionbar_height"
+             android:layout_width="fill_parent">
+
+        <TabWidget
+                android:background="@drawable/actionbar_split_bg_norm"
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+
+        <FrameLayout android:layout_width="fill_parent"
+                     android:layout_height="0px"
+                     android:id="@android:id/tabcontent"/>
+
+    </TabHost>
+
+    <LinearLayout android:id="@+id/search_container"
+                  android:layout_width="fill_parent"
+                  android:orientation="horizontal"
+                  android:gravity="center_vertical"
+                  android:padding="5dp"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/silver_divider_full">
+
+        <EditText
+                android:drawableLeft="@drawable/search_input"
+                android:id="@+id/search"
+                android:hint="@string/start_typing"
+                android:textColor="@color/darkgray"
+                android:textColorHint="@color/medium_gray"
+                android:background="@drawable/input_msg"
+                android:layout_height="@dimen/input_height"
+                android:layout_width="fill_parent"
+                android:inputType="text"/>
+
+    </LinearLayout>
+
+    <ru.nacu.commons.swipe.SwipeView
+            android:id="@+id/swipe"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="1">
+
+        <LinearLayout android:id="@+id/android:empty"
+                      android:gravity="center"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent">
+
+            <LinearLayout
+                    android:id="@+id/loading"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center">
+
+                <ProgressBar style="@style/ProgressBar.Blue"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/empty"
+                          android:gravity="center"
+                          android:layout_width="fill_parent"
+                          android:layout_height="fill_parent">
+
+                <LinearLayout android:id="@+id/sync_empty"
+                              android:visibility="gone"
+                              android:orientation="vertical"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content">
+
+                    <Button
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginLeft="37dp"
+                            android:layout_marginRight="37dp"
+                            android:id="@+id/btn_sync"
+                            android:text="@string/sync_contacts"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/blue_button"
+                            />
+
+                    <TextView android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              android:textAppearance="?android:attr/textAppearanceSmall"
+                              android:gravity="center"
+                              android:layout_marginRight="20dp"
+                              android:layout_marginLeft="20dp"
+                              android:textColor="@color/dark_blue_button_color"
+                              android:text="@string/you_can_sync"
+                            />
+
+                </LinearLayout>
+
+                <TextView android:id="@+id/text_empty"
+                          android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          android:textAppearance="?android:attr/textAppearanceMedium"
+                          android:gravity="center"
+                          android:text="@string/no_items"
+                        />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ListView android:id="@+id/android:list"
+                  android:fastScrollEnabled="true"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:divider="@color/lighter_gray"
+                  android:dividerHeight="0.6dp"
+                  android:fadingEdge="none"
+                />
+
+    </ru.nacu.commons.swipe.SwipeView>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@drawable/actionbar_bg"
+              android:layout_width="fill_parent"
+              android:gravity="center_vertical"
+              android:layout_height="@dimen/actionbar_height">
+
+    <ImageView android:id="@+id/back"
+               android:src="@drawable/back"
+               android:scaleType="center"
+               android:layout_height="@dimen/actionbar_height"
+               android:layout_width="@dimen/actionbar_height"/>
+
+    <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:gravity="center">
+
+        <TextView android:id="@+id/title"
+                  android:text="@string/messages"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:singleLine="true"
+                  android:ellipsize="end"
+                  android:gravity="center"
+                  style="@style/actionbar_title"/>
+
+    </LinearLayout>
+
+    <ImageView android:id="@+id/img"
+               android:layout_height="@dimen/actionbar_thumb"
+               android:layout_width="@dimen/actionbar_thumb"
+               android:layout_margin="3dp"
+               android:scaleType="center"
+               android:src="@drawable/compose"
+               android:layout_weight="0"/>
+
+</LinearLayout>

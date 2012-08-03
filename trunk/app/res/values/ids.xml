@@ -1,0 +1,7 @@
+<resources>
+    <item type="id" name="download_task"/>
+    <item type="id" name="btn_play"/>
+    <item type="id" name="tv_artist"/>
+    <item type="id" name="tv_track"/>
+    <item type="id" name="attachment_holder"/>
+</resources>
