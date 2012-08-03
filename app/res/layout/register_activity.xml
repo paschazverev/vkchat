@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+
+    <fragment
+            android:name="ru.nacu.vkmsg.ui.login.RegisterTopFragment"
+            android:id="@+id/top"
+            android:layout_height="@dimen/actionbar_height"
+            android:layout_width="fill_parent"
+            android:layout_weight="0"
+            />
+
+    <fragment
+            android:name="ru.nacu.vkmsg.ui.login.RegisterFragment"
+            android:id="@+id/fragment"
+            android:layout_height="0dp"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            />
+
+</LinearLayout>

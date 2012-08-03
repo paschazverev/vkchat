@@ -1,0 +1,35 @@
+<resources>
+
+    <array name="connection_type_values">
+        <item>PUSH</item>
+        <item>POLL</item>
+    </array>
+
+    <array name="connection_type_labels">
+        <item>@string/push_connection</item>
+        <item>@string/poll_connection</item>
+    </array>
+
+    <string-array name="poll_time_values">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>240</item>
+    </string-array>
+
+    <string-array name="poll_time_labels">
+        <item>@string/t1</item>
+        <item>@string/t5</item>
+        <item>@string/t10</item>
+        <item>@string/t15</item>
+        <item>@string/t30</item>
+        <item>@string/t60</item>
+        <item>@string/t120</item>
+        <item>@string/t240</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <include layout="@layout/actionbar"/>
+
+    <ScrollView android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="0px">
+
+        <LinearLayout android:orientation="vertical"
+                      android:background="@drawable/tiled_light_bg"
+                      android:gravity="center_horizontal"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="0"
+                          android:layout_marginTop="15dp"
+                          android:background="@drawable/photo_placeholder">
+
+                <ImageView android:id="@+id/big_img"
+                           android:src="@drawable/no_photo_big"
+                           android:scaleType="center"
+                           android:layout_width="200dp"
+                           android:layout_height="200dp"
+                        />
+
+            </LinearLayout>
+
+            <Button
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginRight="37dp"
+                    android:id="@+id/btn_upload"
+                    android:text="@string/upload_photo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    style="@style/blue_button"
+                    />
+
+            <Button
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginRight="37dp"
+                    android:id="@+id/btn_settings"
+                    android:text="@string/app_settings"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    style="@style/blue_button"
+                    />
+
+            <Button
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginRight="37dp"
+                    android:id="@+id/btn_exit"
+                    android:text="@string/signout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    style="@style/blue_button"
+                    />
+
+            <Button
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginRight="37dp"
+                    android:id="@+id/btn_close_app"
+                    android:text="@string/exit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    style="@style/blue_button"
+                    />
+
+            <Button
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginRight="37dp"
+                    android:id="@+id/btn_logs"
+                    android:text="@string/send_logs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    style="@style/blue_button"
+                    />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

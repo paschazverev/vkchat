@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/preferences"
+          android:id="@+id/preferences"
+          android:icon="@drawable/settings"/>
+    <item android:title="@string/signout"
+          android:id="@+id/signout"
+          android:icon="@drawable/exit"/>
+    <item android:title="@string/send_logs"
+          android:id="@+id/send_logs"
+          android:icon="@drawable/logs"/>
+</menu>

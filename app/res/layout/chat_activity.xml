@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+
+    <include
+            layout="@layout/actionbar"
+            android:id="@+id/actionbar"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="0"
+            />
+
+    <LinearLayout android:id="@+id/selection_bar"
+                  android:background="@drawable/actionbar_bg"
+                  android:layout_width="fill_parent"
+                  android:gravity="center_vertical"
+                  android:visibility="gone"
+                  android:orientation="horizontal"
+                  android:layout_height="@dimen/actionbar_height">
+
+        <Button android:id="@+id/btn_cancel"
+                android:layout_weight="1"
+                style="@style/selection_button"
+                android:text="@string/cancel"
+                android:background="@drawable/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"/>
+
+        <Button android:id="@+id/btn_fwd"
+                android:layout_weight="1"
+                style="@style/selection_button"
+                android:text="@string/forward"
+                android:background="@drawable/fwd_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"/>
+
+        <Button android:id="@+id/btn_del"
+                android:layout_weight="1"
+                android:text="@string/delete"
+                style="@style/selection_button"
+                android:background="@drawable/delete_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"/>
+
+    </LinearLayout>
+
+    <fragment
+            android:name="ru.nacu.vkmsg.ui.chat.ChatFragment"
+            android:id="@+id/list"
+            android:layout_height="0dp"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            />
+
+</LinearLayout>

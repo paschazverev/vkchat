@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+            android:key="always_connect"
+            android:defaultValue="true"
+            android:title="@string/always_connect"
+            android:summary="@string/always_connect_summary"/>
+
+    <ru.nacu.commons.preferences.ChildListPreference
+            android:key="connection_type"
+            android:title="@string/connection_type"
+            android:dialogTitle="@string/connection_type"
+            android:entries="@array/connection_type_labels"
+            android:entryValues="@array/connection_type_values"
+            android:defaultValue="PUSH"
+            android:dependency="always_connect"
+            />
+
+    <PreferenceCategory
+            android:key="poll_settings"
+            android:title="@string/poll_connection_settings">
+
+        <CheckBoxPreference
+                android:key="autostart"
+                android:defaultValue="false"
+                android:title="@string/autostart"
+                android:summary="@string/autostart_summary"/>
+
+        <ListPreference
+                android:key="poll_time"
+                android:title="@string/timeout"
+                android:dialogTitle="@string/timeout"
+                android:entries="@array/poll_time_values"
+                android:entryValues="@array/poll_time_values"
+                android:defaultValue="5"
+                />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
