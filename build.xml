@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project name="build" default="build">
+
+    <property environment="env"/>
+
+    <target name="build">
+        <echo>Cleaning project...</echo>
+        <exec dir="./" executable="mvn">
+            <arg line="clean"/>
+        </exec>
+
+        <delete>
+            <fileset dir="./" includes="**/Thumbs.db"/>
+        </delete>
+
+        <exec dir="./" executable="${env.M2_HOME}\bin\mvn">
+            <arg line="package"/>
+        </exec>
+
+        <signjar
+                jar="app/target/msg-app-1.0-SNAPSHOT.apk"
+                signedjar="app/target/signed.apk"
+                alias="justreader"
+                keystore="store.jks"
+                keypass="Qdfvs6"
+                storepass="Qdfvs6"
+                verbose="yes"
+                force="true"/>
+
+        <exec dir="app/target" executable="zipalign">
+            <arg line="-v 4 signed.apk aligned.apk"/>
+        </exec>
+
+    </target>
+</project>
