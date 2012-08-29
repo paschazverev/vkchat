@@ -174,7 +174,9 @@ public final class ContactsFragment extends AsyncListFragment implements TabHost
 
     @Override
     public void onReady(long dialogId, long userId, long chatId) {
-        getHost().onDialogSelect(dialogId, userId, chatId);
+        final Host host = getHost();
+        if (host != null)
+            host.onDialogSelect(dialogId, userId, chatId);
     }
 
     @SuppressWarnings("unchecked")

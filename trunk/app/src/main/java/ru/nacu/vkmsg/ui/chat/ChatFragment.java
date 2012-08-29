@@ -105,17 +105,19 @@ public final class ChatFragment extends AsyncListFragment implements View.OnClic
     private final BroadcastReceiver typingReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            long userId = intent.getLongExtra("userId", 0);
-            long chatId = intent.getLongExtra("chatId", 0);
+            if(isAdded() && getActivity() != null && !getActivity().isFinishing()) {
+                long userId = intent.getLongExtra("userId", 0);
+                long chatId = intent.getLongExtra("chatId", 0);
 
-            if (ChatFragment.this.chatId != 0 && ChatFragment.this.chatId != chatId) {
-                return;
-            }
+                if (ChatFragment.this.chatId != 0 && ChatFragment.this.chatId != chatId) {
+                    return;
+                }
 
-            final String v = users.get(userId);
-            if (v != null) {
-                footer.setText(v + " " + getString(R.string.typing));
-                VKMessenger.getHandler().postDelayed(ChatFragment.this, 5000);
+                final String v = users.get(userId);
+                if (v != null) {
+                    footer.setText(v + " " + getString(R.string.typing));
+                    VKMessenger.getHandler().postDelayed(ChatFragment.this, 5000);
+                }
             }
         }
     };
